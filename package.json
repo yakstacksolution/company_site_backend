@@ -8,6 +8,7 @@
     "start": "node src/server.js",
     "seed": "node src/seed.js",
     "smoke": "node src/smoke.js",
+    "check:production-env": "NODE_ENV=production node scripts/check-production-env.js",
     "dev:memory": "node src/devServer.js",
     "migrate:launch": "node src/launchMigration.js",
     "create-admin": "node src/createAdmin.js"
