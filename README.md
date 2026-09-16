@@ -1,13 +1,16 @@
-# company_site_backend
+# Yak Stack Solution Backend
 
-Backend API for the Yak Stack Solution company site.
+Laravel SQL API for the Yak Stack Solution company site.
 
 ## Local development
 
 ```bash
-npm ci
+composer install
 cp .env.example .env
-npm run dev
+php artisan key:generate
+php artisan migrate --seed
+php artisan storage:link
+php artisan serve
 ```
 
 Health endpoints:
@@ -15,12 +18,4 @@ Health endpoints:
 - `/api/health`
 - `/api/ready`
 
-## Production
-
-The app starts with:
-
-```bash
-npm start
-```
-
-For cPanel CI/CD setup, see [docs/cpanel-deployment.md](docs/cpanel-deployment.md).
+The API includes auth, admins, services, projects, blogs, team, testimonials, customers, jobs, job applications, contacts, settings, site content, uploads, analytics, sitemap, and robots.
